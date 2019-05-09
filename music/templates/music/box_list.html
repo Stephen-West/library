@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}List of boxes{% endblock %}
+{% block heading %}List of boxes{% endblock %}
+{% block content %}
+<a href="/music/box/index_csv.html">Click to download csv file</a>
+<p>
+
+<div align=left>
+{% if box_list %}
+    <ul>
+    {% for b in box_list %}
+        <li><a href="/music/box/{{ b.id }}/">{{ b.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No boxes are available.</p>
+{% endif %}
+</div>
+{% endblock %}

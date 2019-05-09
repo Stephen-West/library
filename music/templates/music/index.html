@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Index of pieces {% endblock %}
+{% block heading %}Index of pieces {% endblock %}
+{% block content %}
+<a href="/music/piece/index_csv.html">Click to download csv file</a>
+<p>
+<div align=left>
+{% if piece_list %}
+    <ul>
+    {% for p in piece_list %}
+        <li><a href="/music/piece/{{ p.id }}/">{{ p.name }}: ({{p.composer}})</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No pieces are available.</p>
+{% endif %}
+</div>
+{% endblock %}

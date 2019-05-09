@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Piece detail{% endblock %}
+{% block heading %}Piece: <i>{{piece.name}}</i> {% endblock %}
+{% block content %}
+<div align=left>
+<table>
+<tr><th align=left>Serial number:</th><td>{{piece.id}}</td></tr>
+<tr><th align=left>Composer:</th><td>{{piece.composer}}</td></tr>
+<tr><th align=left>Publisher:</th><td>{{piece.publisher}}</td></tr>
+<tr><th align=left>Instrument:</th><td>{{piece.instrument}}</td></tr>
+<tr><th align=left>Parts:</th><td>{{piece.parts |stringformat:"i"}}</td></tr>
+<tr><th align=left>Copies:</th><td>{{piece.number_of_copies}}</td></tr>
+<tr><th align=left>Box:</th><td>{{piece.box}}</td></tr>
+<tr><th align=left>Notes:</th><td>{{piece.notes}}</td></tr>
+
+{% endblock %}

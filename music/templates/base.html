@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+<title>{% block title %}Electronic music library{%endblock %}</title>
+
+<style>
+body{
+	background-color: rgb(135,195,211)
+	}
+</style>
+</head>
+<body>
+<center>
+<h1>Electronic Music Library</h1>
+<h2>{% block heading %}{%endblock %}</h2>
+<table>
+<tr><td><a href=/music/piece/index.html>List all music</a></td>
+	<td><a href=/music/box/index.html>List boxes of music</a></td>
+	<td><a href=/music/piece/composer_index.html>Index by composer</a></td>
+	<td><a href=/music/index.html>Home page</a></td>
+</table>
+{% block content %}{%endblock %}
+<table>
+<tr><td><a href=/music/piece/index.html>List all music</a></td>
+	<td><a href=/music/box/index.html>List boxes of music</a></td>
+	<td><a href=/music/piece/composer_index.html>Index by composer</a></td>
+	<td><a href=/music/index.html>Home page</a></td>
+</table>
+</center>
+
+</body>
+</html>
